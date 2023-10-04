@@ -1,0 +1,25 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class MergeArrays {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the first array: ");
+        int length1 = scanner.nextInt();
+        int[] array1 = new int[length1];
+        System.out.println("Enter elements for the first array:");
+        for (int i = 0; i < length1; i++) {
+            array1[i] = scanner.nextInt();
+        }
+        System.out.print("Enter the number of elements in the second array: ");
+        int length2 = scanner.nextInt();
+        int[] array2 = new int[length2];
+        System.out.println("Enter elements for the second array:");
+        for (int i = 0; i < length2; i++) {
+            array2[i] = scanner.nextInt();
+        }
+        int[] mergedArray = new int[length1 + length2];
+        System.arraycopy(array1, 0, mergedArray, 0, length1);
+        System.arraycopy(array2, 0, mergedArray, length1, length2);
+        System.out.println("Merged Array: " + Arrays.toString(mergedArray));
+    }
+}
