@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class circle
+{
+   double radius;
+   void getData(float r)
+   {
+       radius=r;
+   }
+   double circleArea()
+   {
+       double area;
+       area=(3.14*radius*radius);
+       return (area);
+   }
+}
+public class circleArea
+{
+    public static void main(String[ ] args)
+    {
+        double a;
+        circle cir1=new circle();
+        cir1.getData(8);
+        a=cir1.circleArea();
+        System.out.println("Area of the circle : " +a);
+    }
+}
